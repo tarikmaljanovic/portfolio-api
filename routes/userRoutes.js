@@ -22,8 +22,16 @@ router.post('/', async (req, res) => {
             username: result.username
         });
     } catch (err) {
-        res.json({ message: err.stack });
+        res.status(500).json({ error: err.message });
     }
 });
+
+//Send Message
+
+//Get Messages
+
+//Delete Message
+
+//Get Message by User
 
 export default router;

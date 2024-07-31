@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const connectionString = process.env.ATLAS_URI;
+const connectionString = process.env.NODE_ENV === "production" ? process.env.MONGO_URI : "mongodb://localhost:27017";
 
 const client = new MongoClient(connectionString);
 
